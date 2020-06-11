@@ -25,6 +25,8 @@
 ;; remember to use specs
 ;; todo later. handle string anchors by diffing new edits of text.md and erroring out if the new anchor cannot be inferred
 ;; related to ^^ validate that anchors are unique and throw errors if not.
+;; note to self: the text here is the "red thread" that guides the flow of the article, but could be a video, audio as wel.
+;; think of good name for the concept.
 
 
 (-> (nav-bar {:logo {:url "https://nytimes.com"
