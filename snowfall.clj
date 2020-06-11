@@ -45,39 +45,39 @@
                      (transition-start :fade-in-next-screen))
 
              (screen 3 {:options [:scroll :no-text]
-                        :anchor '“powder stash,” known as Tunnel Creek.'}
+                        :anchor "“powder stash,” known as Tunnel Creek."}
                      (video "./mountain.mp4" :play-once))
 
              (screen 4 {:options :scroll
-                        :anchor 'It is a term with broad meaning.'}
+                        :anchor "It is a term with broad meaning."}
                      (images {"./train-wreckage.jpg" {:pos "right" :size 0.6}
                               "./croud-of-people.jpg" {:pos "right" :size 0.6}})
 
                      (video {"www.nytimes.com/skiers-giggle-in-glee.mp4" {:pos "right" :cut 0.66 :size 1}})
 
-                     (annotation {:anchor 'Rudolph promoted Stevens Pass'
-                                  :img './rudolph.jpg'
-                                  :title 'Chris Rudolph'
-                                  :subtitle '30, Director of marketing at Stevens Pass'
-                                  :link '.slideshow1.html'})
+                     (annotation {:anchor "Rudolph promoted Stevens Pass"
+                                  :img "./rudolph.jpg"
+                                  :title "Chris Rudolph"
+                                  :subtitle "30, Director of marketing at Stevens Pass"
+                                  :link ".slideshow1.html"})
 
-                     (annotation {:anchor 'Saugstad, 33, a former champion'
-                                  :img './elyse.jpg'
-                                  :title 'Elyse Saugstad'
-                                  :subtitle '33, Professional freeskier'
-                                  :link '.slideshow2.html'})
+                     (annotation {:anchor "Saugstad, 33, a former champion"
+                                  :img "./elyse.jpg"
+                                  :title "Elyse Saugstad"
+                                  :subtitle "33, Professional freeskier"
+                                  :link ".slideshow2.html"})
 
-                     (annotation {:anchor 'Keith Carlsen, a photographer and'
-                                  :img './keith.jpg'
-                                  :title 'Keith Carlsen'
-                                  :subtitle '38, Photographer and former editor of Powder'
-                                  :link '.slideshow3.html'})
+                     (annotation {:anchor "Keith Carlsen, a photographer and"
+                                  :img "./keith.jpg"
+                                  :title "Keith Carlsen"
+                                  :subtitle "38, Photographer and former editor of Powder"
+                                  :link ".slideshow3.html"})
 
-                     (annotation {:anchor 'John Stifter, arrived by train to'
-                                  :img './john.jpg'
-                                  :title 'John Stifter'
-                                  :subtitle '29, Editor of Powder magazine'
-                                  :link '.slideshow4.html'})
+                     (annotation {:anchor "John Stifter, arrived by train to"
+                                  :img "./john.jpg"
+                                  :title "John Stifter"
+                                  :subtitle "29, Editor of Powder magazine"
+                                  :link ".slideshow4.html"})
 
                      (content-box {"www.nytimes.com/photo-slideshow1.js" {:pos "right"
                                                                           :cut 0.66
@@ -86,7 +86,7 @@
                                                                           :photo-credit "Keith Carlsen"}}))
 
              (screen 5 {:options [:no-scroll :no-text]
-                        :anchor-after 'for a mountain to move.'}
+                        :anchor-after "for a mountain to move."}
                      (video "./weather.mp4" {:size "full-width" :play "once"})
 
                      (paragraph "A large storm produced 32 inches of snow at Stevens Pass in the three days before the avalanche."
