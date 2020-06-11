@@ -24,6 +24,7 @@
 ;; investigate transitions. do we want to support both relative starts and hard coded anchors or just one
 ;; remember to use specs
 ;; todo later. handle string anchors by diffing new edits of text.md and erroring out if the new anchor cannot be inferred
+;; related to ^^ validate that anchors are unique and throw errors if not.
 
 
 (-> (nav-bar {:logo {:url "https://nytimes.com"
@@ -75,25 +76,25 @@
                                   :title 'John Stifter'
                                   :subtitle '29, Editor of Powder magazine'
                                   :link '.slideshow4.html'})
-                     
+
                      (content-box {"www.nytimes.com/photo-slideshow1.js" {:pos "right"
                                                                           :cut 0.66
                                                                           :size 1
                                                                           :caption "Several of those with plans to ski Tunnel Creek the next day huddled around a fire in front of Tim Wangen’s trailer. Among the assembled were Jim Jack, in red pants, and Tiffany Abraham, in red jacket."
                                                                           :photo-credit "Keith Carlsen"}}))
-             
+
              (screen 5 {:options [:no-scroll :no-text]
                         :anchor-after 'for a mountain to move.'}
                      (video "./weather.mp4" {:size "full-width" :play "once"})
-                     
-                     (paragraph "A large storm produced 32 inches of snow at Stevens Pass in the three days before the avalanche." 
+
+                     (paragraph "A large storm produced 32 inches of snow at Stevens Pass in the three days before the avalanche."
                                 {:options [:right :up :fade-in]})
-                     
+
                      (paragraph "The new snow put an increasing load on a fragile crust."
                                 {:options [:right :up :fade-in]
                                  :delay 5})))
-    (footer {:preheader "next part" 
-             :header (next-chapter) 
-             :button {:source "./button.png" 
+    (footer {:preheader "next part"
+             :header (next-chapter)
+             :button {:source "./button.png"
                       :link (next-chapter)}}))
 
