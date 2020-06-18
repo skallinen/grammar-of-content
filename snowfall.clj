@@ -17,6 +17,9 @@
     ;; annotations
 ;; text
 
+;; size is in terms of columns
+;; size = 1 means full width of text
+
 
 ;; open questions
 ;; how do we anchor things?
@@ -35,25 +38,35 @@
               :social ["comments" "fb" "twitter" "mail"]})
 
     (chapter "Tunnel Creek"
-             (screen 1
-                     {:options [:no-scroll :no-text]}
+             "./path/tunnel_creek.md"  ;; chapter will be multimethod which dispatches on file types
+             (screen {:options [:no-scroll :no-text]}
                      (video "./intro.mp4" {:size "full-width" :play "loop"})
-                     (header "Snow Fall" "The Avalanche at Tunnel Creek" "By John" :right :up))
+                     (header "Snow Fall" "The Avalanche at Tunnel Creek" "By John" {:options [:fade-in]
+                                                                                    :pos [:right :up]}))
 
-             (screen 2 {:options [:scroll :drop-cap]}
-                     (video {"www.link.org/happy.mp4" {:pos "right" :size 0.6}})
-                     (transition-start :fade-in-next-screen))
+             (transition :partial-slide-up)
 
-             (screen 3 {:options [:scroll :no-text]
-                        :anchor "“powder stash,” known as Tunnel Creek."}
-                     (video "./mountain.mp4" :play-once))
+             (screen {:options [:drop-cap]}
+                     (video "http://nytimes.com/saugstad.mp4"
+                            {:pos :right :size 0.6}))
 
-             (screen 4 {:options :scroll
-                        :anchor "It is a term with broad meaning."}
-                     (images {"./train-wreckage.jpg" {:pos "right" :size 0.6}
-                              "./croud-of-people.jpg" {:pos "right" :size 0.6}})
+             (transition :fade-in)
 
-                     (video {"www.nytimes.com/skiers-giggle-in-glee.mp4" {:pos "right" :cut 0.66 :size 1}})
+             (screen {:options [:no-scroll :no-text]
+                      :anchor "“powder stash,” known as Tunnel Creek."}
+                     (video "./mountain.mp4" {:options [:play-once]}))
+
+             (screen (images ["./train-wreckage.jpg" "./crowd-of-people.jpg"]
+                             {:pos :right
+                              :size 0.6
+                              :anchor "In late February 1910, ceaseless"
+                              :caption "Wreckage after the Wellington, Wash., avalanche in 1910, which buried two passenger trains marooned by snowstorms outside the Cascade Tunnel and killed 96 people. Rescue workers transported bodies from the scene on sleds."
+                              :photo-credit "Museum of History & Industry"})
+
+                     (video "www.nytimes.com/skiers-giggle-in-glee.mp4"
+                            {:pos :right
+                             :cut 0.66
+                             :anchor "makes skiers giggle in glee"})
 
                      (annotation {:anchor "Rudolph promoted Stevens Pass"
                                   :img "./rudolph.jpg"
@@ -79,14 +92,14 @@
                                   :subtitle "29, Editor of Powder magazine"
                                   :link ".slideshow4.html"})
 
-                     (content-box {"www.nytimes.com/photo-slideshow1.js" {:pos "right"
+                     (content-box {"www.nytimes.com/photo-slideshow1.js" {:pos :right
                                                                           :cut 0.66
                                                                           :size 1
                                                                           :caption "Several of those with plans to ski Tunnel Creek the next day huddled around a fire in front of Tim Wangen’s trailer. Among the assembled were Jim Jack, in red pants, and Tiffany Abraham, in red jacket."
                                                                           :photo-credit "Keith Carlsen"}}))
 
-             (screen 5 {:options [:no-scroll :no-text]
-                        :anchor-after "for a mountain to move."}
+             (screen {:options [:no-scroll :no-text]
+                      :anchor "for a mountain to move."}
                      (video "./weather.mp4" {:size "full-width" :play "once"})
 
                      (paragraph "A large storm produced 32 inches of snow at Stevens Pass in the three days before the avalanche."
@@ -95,8 +108,8 @@
                      (paragraph "The new snow put an increasing load on a fragile crust."
                                 {:options [:right :up :fade-in]
                                  :delay 5})))
+
     (footer {:preheader "next part"
              :header (next-chapter)
              :button {:source "./button.png"
                       :link (next-chapter)}}))
-
