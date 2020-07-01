@@ -1,5 +1,5 @@
 (ns boeing-737)
-
+;; url: https://www.nytimes.com/interactive/2019/03/29/business/boeing-737-max-8-flaws.html
 
 (-> (nav-bar {:options [:overlay] ;; defaults to transparent background
               :logo {:url "https://nytimes.com"

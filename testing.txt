@@ -1,0 +1,41 @@
+# Test 1
+
+Two user tests. Both non professional developers, but some familiarity with clojure.
+
+Goal: Verify readability and clarity of the dsl. Find what needs to be improved of the first version before implementation.
+
+Checklist:
+- book interviews
+- dates (have now tentative)
+- comfirm the tech works.
+- make sure they have paper and pens
+
+interview structutre:
+Marginal 10 min
+Introductions 2 min
+Instructions 2 min
+*minimal explanation what it is, we will explain anything that remains unclear at the very end.*
+- Why you are here. Interested in what you personally think.
+- So think aloud. Like a sports commentator of your thoughts.
+Warm up questions.5 - 10 min
+From the very general to more specifik
+- Tell me about yourself (general)
+- What is your relation to code.
+
+The test 20-30 min
+Test structure:
+
+- Read the two examples and "think aloud" what you see. 15 min. Timeboxed 5 minutes per code, as far as you get
+- Now draw what this codep produces. 15 min. 5 minutes per code as far as you get.
+
+End interview 10-15 min.
+- How did this feel?
+- What were the major sumbling blocks
+- What did you like a lot?
+- Would you use something like this?
+- For what kind of things?
+- What else (open question)?
+
+End explanation 3 min
+- Why we are doing, what we are trying to do.
+

@@ -7,7 +7,7 @@
               :social ["comments" "fb" "twitter" "mail"]})
 
     (post "Tunnel Creek"
-          "./path/tunnel_creek.md"  ;; chapter will be multimethod which dispatches on file types
+          "./path/tunnel_creek.md"  ;; post will be multimethod which dispatches on file types
           (screen {:options [:no-scroll :interrupt-flow]}
                   (video "./intro.mp4" {:size "full-width" :play "loop"})
                   (title {:header "Snow Fall"
